@@ -9,15 +9,16 @@ const url = 'https://danepubliczne.imgw.pl/api/data/synop'
 function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [weather, setWeather] = useState([])
-  const [nrStation, setNrStation] = useState(12415)
+  const [nrStation, setNrStation] = useState('12415')
 
   const changeCity = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     const nr = e.target.value
     setNrStation(nr)
   }
 
   const fetchWeather = async () => {
+    console.log('start fetching')
     setIsLoading(true)
     try {
       const response = await fetch(url)
@@ -33,7 +34,6 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       fetchWeather()
-      // console.log('test:', weather[3])
     }, 100)
   }, [])
 
@@ -44,10 +44,11 @@ function App() {
       </main>
     )
   }
+
   return (
     <main>
       <Navbar weather={weather} changeCity={changeCity} />
-      {/* <Card weather={weather} index={index} /> */}
+      {/* <Card weather={weather} /> */}
       <CardContainer weather={weather} nrStation={nrStation} />
     </main>
   )

@@ -7,7 +7,13 @@ const CardContainer = ({ weather, nrStation }) => {
       {weather
         .filter((item) => item.id_stacji === nrStation)
         .map((filteredItem) => {
-          return <Card key={filteredItem.id_stacji} {...filteredItem} />
+          return (
+            <Card
+              key={filteredItem.id_stacji}
+              {...filteredItem}
+              nrStation={nrStation}
+            />
+          )
         })}
     </div>
   )

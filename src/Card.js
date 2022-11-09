@@ -15,7 +15,7 @@ function Card({
     <article>
       <div className='header'>
         id:{id_stacji}
-        {nrStation}
+        id2:{nrStation}
         <h1>
           {temperatura}
           &deg;C
