@@ -1,20 +1,30 @@
 import React from 'react'
 import { social } from './data'
 
-function Card({ stacja, data_pomiaru, godzina_pomiaru, temperatura }) {
-  // const { id_stacji, stacja, data_pomiaru, temperautra } = weather
+function Card({
+  id_stacji,
+  stacja,
+  data_pomiaru,
+  godzina_pomiaru,
+  temperatura,
+  nrStation,
+}) {
+  // const { id_stacji, stacja, data_pomiaru, godzina_pomiaru, temperatura } = item
+  // console.log(item)
   return (
     <article>
       <div className='header'>
+        id:{id_stacji}
+        {nrStation}
         <h1>
           {temperatura}
           &deg;C
         </h1>
         <h4>{stacja}</h4>
         <h5>
-          {data_pomiaru}
+          data: {data_pomiaru}
           <span>|</span>
-          {godzina_pomiaru}:00
+          godzina: {godzina_pomiaru}:00
         </h5>
       </div>
       <div className='img'>

@@ -1,12 +1,14 @@
 import React from 'react'
 import Card from './Card'
 
-const CardContainer = ({ weather }) => {
+const CardContainer = ({ weather, nrStation }) => {
   return (
     <div>
-      {weather.map((item) => {
-        return <Card key={item.id_stacji} {...item} />
-      })}
+      {weather
+        .filter((item) => item.id_stacji === nrStation)
+        .map((filteredItem) => {
+          return <Card key={filteredItem.id_stacji} {...filteredItem} />
+        })}
     </div>
   )
 }

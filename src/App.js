@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Card from './Card'
 import CardContainer from './CardContainer'
 import Loading from './Loading'
 import Navbar from './Navbar'
@@ -8,11 +9,12 @@ const url = 'https://danepubliczne.imgw.pl/api/data/synop'
 function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [weather, setWeather] = useState([])
-  const [nrStacji, setNrStacji] = useState(12415)
+  const [nrStation, setNrStation] = useState(12415)
 
-  const handleBtn = (e) => {
+  const changeCity = (e) => {
     e.preventDefault()
-    console.log(e.target.value)
+    const nr = e.target.value
+    setNrStation(nr)
   }
 
   const fetchWeather = async () => {
@@ -20,7 +22,6 @@ function App() {
     try {
       const response = await fetch(url)
       const data = await response.json()
-      // console.log(data)
       setIsLoading(false)
       setWeather(data)
     } catch (error) {
@@ -32,6 +33,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       fetchWeather()
+      // console.log('test:', weather[3])
     }, 100)
   }, [])
 
@@ -44,8 +46,9 @@ function App() {
   }
   return (
     <main>
-      <Navbar weather={weather} handleBtn={handleBtn} />
-      <CardContainer weather={weather} />
+      <Navbar weather={weather} changeCity={changeCity} />
+      {/* <Card weather={weather} index={index} /> */}
+      <CardContainer weather={weather} nrStation={nrStation} />
     </main>
   )
 }
