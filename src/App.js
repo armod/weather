@@ -35,7 +35,7 @@ function App() {
     setTimeout(() => {
       fetchWeather()
     }, 100)
-  }, [])
+  }, [nrStation])
 
   if (isLoading) {
     return (

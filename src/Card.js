@@ -8,7 +8,10 @@ function Card({
   data_pomiaru,
   godzina_pomiaru,
   temperatura,
-  nrStation,
+  predkosc_wiatru,
+  kierunek_wiatru,
+  wilgotnosc_wzgledna,
+  suma_opadu,
 }) {
   return (
     <Wrapper>
@@ -26,10 +29,26 @@ function Card({
       </main>
       <div className='other-params'>
         <div className='weather-icon'>{weatherIcons[1].icon}</div>
-        <div className='wind-speed'>{weatherIcons[2].icon}</div>
-        <div className='wind-direction'>{weatherIcons[14].icon}</div>
-        <div className='humidity'>{weatherIcons[10].icon}</div>
-        <div className='rain'>{weatherIcons[3].icon}</div>
+        <div className='wind-speed'>
+          <p>prędkość wiatru</p>
+          <span>{weatherIcons[2].icon}</span>
+          <span>{predkosc_wiatru} m/s</span>
+        </div>
+        <div className='wind-direction'>
+          <p>kierunek wiatru</p>
+          <span>{weatherIcons[14].icon}</span>
+          <span>{kierunek_wiatru}</span>
+        </div>
+        <div className='humidity'>
+          <p>wilgotnosc względna</p>
+          <span>{weatherIcons[10].icon}</span>
+          <span>{wilgotnosc_wzgledna}</span>
+        </div>
+        <div className='rain'>
+          <p>suma opadu</p>
+          <span>{weatherIcons[3].icon}</span>
+          <span>{suma_opadu}</span>
+        </div>
       </div>
       <footer>
         <ul>
@@ -61,7 +80,6 @@ const Wrapper = styled.article`
   width: 360px;
   background: var(--primary2);
   color: var(--primary4);
-  transition: all 0.5s ease-in linear;
   header {
     display: flex;
     justify-content: space-between;
@@ -86,17 +104,40 @@ const Wrapper = styled.article`
   .other-params {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     font-size: 2rem;
+    p {
+      font-size: 0.75rem;
+    }
     .weather-icon {
-      margin: 0 auto;
       font-size: 6rem;
+    }
+    .wind-speed,
+    .wind-direction,
+    .humidity,
+    .rain {
+      border: 1px solid black;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 300px;
+      margin: 3px;
+      padding: 3px;
+      p {
+        grid-column: 1/3;
+        grid-row: 1;
+      }
+      span {
+        grid-row: 2;
+      }
     }
   }
   footer {
+    margin: 5px;
     ul {
       display: flex;
       justify-content: space-around;
       li {
+        transition: all 0.3s ease-in;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -107,6 +148,11 @@ const Wrapper = styled.article`
         a {
           margin-top: 4px;
           color: var(--primary5);
+        }
+        &:hover {
+          scale: 1.3;
+          box-shadow: 1px 1px 3px 1px var(--primary5);
+          background: var(--primary1);
         }
       }
     }
