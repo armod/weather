@@ -3,6 +3,7 @@ import CardContainer from './CardContainer'
 import Layout from './components/Layout'
 import Loading from './Loading'
 import Navbar from './Navbar'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const url = 'https://danepubliczne.imgw.pl/api/data/synop'
 
@@ -10,6 +11,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [weather, setWeather] = useState([])
   const [nrStation, setNrStation] = useState('12415')
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false)
 
   const changeCity = (e) => {
     // e.preventDefault()
@@ -31,6 +33,11 @@ function App() {
     }
   }
 
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen)
+    console.log(isNavbarOpen)
+  }
+
   useEffect(() => {
     setTimeout(() => {
       fetchWeather()
@@ -48,7 +55,14 @@ function App() {
   return (
     <main>
       <Layout>
-        <Navbar weather={weather} changeCity={changeCity} />
+        <button className='btn-toggle' onClick={toggleNavbar}>
+          <GiHamburgerMenu />
+        </button>
+        <Navbar
+          weather={weather}
+          changeCity={changeCity}
+          isNavbarOpen={isNavbarOpen}
+        />
         <CardContainer weather={weather} nrStation={nrStation} />
       </Layout>
     </main>

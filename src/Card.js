@@ -78,7 +78,7 @@ const Wrapper = styled.article`
   padding: 5px;
   margin: 5px;
   width: 360px;
-  background: var(--primary2);
+  background: linear-gradient(var(--primary2), var(--primary1));
   color: var(--primary4);
   header {
     display: flex;
@@ -104,22 +104,25 @@ const Wrapper = styled.article`
   .other-params {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     font-size: 2rem;
+    margin: 0 auto;
     p {
       font-size: 0.75rem;
     }
     .weather-icon {
+      margin: 0 auto;
       font-size: 6rem;
+      svg {
+        fill: var(--primary5);
+      }
     }
     .wind-speed,
     .wind-direction,
     .humidity,
     .rain {
-      border: 1px solid black;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      width: 300px;
+      width: 320px;
       margin: 3px;
       padding: 3px;
       p {
@@ -129,10 +132,13 @@ const Wrapper = styled.article`
       span {
         grid-row: 2;
       }
+      &:hover {
+        border-bottom: 2px;
+      }
     }
   }
   footer {
-    margin: 5px;
+    margin: 15px;
     ul {
       display: flex;
       justify-content: space-around;
