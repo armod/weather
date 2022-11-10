@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import CardContainer from './CardContainer'
+import Layout from './components/Layout'
 import Loading from './Loading'
 import Navbar from './Navbar'
 
@@ -46,8 +47,10 @@ function App() {
 
   return (
     <main>
-      <Navbar weather={weather} changeCity={changeCity} />
-      <CardContainer weather={weather} nrStation={nrStation} />
+      <Layout>
+        <Navbar weather={weather} changeCity={changeCity} />
+        <CardContainer weather={weather} nrStation={nrStation} />
+      </Layout>
     </main>
   )
 }
