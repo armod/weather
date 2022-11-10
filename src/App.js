@@ -17,6 +17,7 @@ function App() {
     // e.preventDefault()
     const nr = e.target.value
     setNrStation(nr)
+    setIsNavbarOpen(!isNavbarOpen)
   }
 
   const fetchWeather = async () => {
@@ -42,7 +43,7 @@ function App() {
     setTimeout(() => {
       fetchWeather()
     }, 100)
-  }, [nrStation])
+  }, [])
 
   if (isLoading) {
     return (

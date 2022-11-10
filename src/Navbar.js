@@ -32,20 +32,30 @@ const Navbar = ({ weather, changeCity, isNavbarOpen }) => {
 
 export default Navbar
 const Wrapper = styled.nav`
-  display: block;
-
-  border: 1px solid black;
-  margin: 10px auto;
-  width: 80vw;
-  padding: 15px;
+  display: flex;
   justify-content: center;
+
   .navbar-container {
-    margin-top: -150px;
+    background: linear-gradient(var(--primary4), var(--primary5));
+    position: absolute;
+    border: 1px solid black;
+    width: 70vw;
+    padding: 15px;
+    margin-top: -350px;
+    transition: all 0.3s ease-in-out;
   }
   .show-navbar {
     margin-top: 0;
   }
   .btn {
-    background: yellow;
+    background: var(--primary1);
+    color: var(--primary3);
+    margin: 2px;
+    padding: 3px;
+    transition: all 0.3s ease-out;
+    &:hover {
+      background: var(--primary3);
+      color: var(--primary1);
+    }
   }
 `
