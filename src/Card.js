@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { social } from './data'
+import { social, weatherIcons } from './data'
 
 function Card({
   id_stacji,
@@ -21,12 +21,15 @@ function Card({
           {temperatura}
           &deg;C
         </h1>
+        <h2>{weatherIcons[8].icon}</h2>
         <h4>{stacja}</h4>
       </main>
-      <div className='img'>
-        {/* start image */}
-        image
-        {/* end image */}
+      <div className='other-params'>
+        <div className='weather-icon'>{weatherIcons[1].icon}</div>
+        <div className='wind-speed'>{weatherIcons[2].icon}</div>
+        <div className='wind-direction'>{weatherIcons[14].icon}</div>
+        <div className='humidity'>{weatherIcons[10].icon}</div>
+        <div className='rain'>{weatherIcons[3].icon}</div>
       </div>
       <footer>
         <ul>
@@ -68,12 +71,25 @@ const Wrapper = styled.article`
     }
   }
   main {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     h1 {
-      font-size: 5rem;
+      font-size: 4rem;
       font-weight: 400;
+    }
+    h2 {
+      order: -1;
+    }
+  }
+  .other-params {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    .weather-icon {
+      margin: 0 auto;
+      font-size: 6rem;
     }
   }
   footer {
@@ -99,5 +115,10 @@ const Wrapper = styled.article`
   @media screen and (min-width: 992px) {
     width: 460px;
     transition: all 0.5s ease-in linear;
+    main {
+      h1 {
+        font-size: 5rem;
+      }
+    }
   }
 `
