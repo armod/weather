@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Card from './Card'
 import CardContainer from './CardContainer'
 import Loading from './Loading'
 import Navbar from './Navbar'
@@ -48,7 +47,6 @@ function App() {
   return (
     <main>
       <Navbar weather={weather} changeCity={changeCity} />
-      {/* <Card weather={weather} /> */}
       <CardContainer weather={weather} nrStation={nrStation} />
     </main>
   )

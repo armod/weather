@@ -9,8 +9,6 @@ function Card({
   temperatura,
   nrStation,
 }) {
-  // const { id_stacji, stacja, data_pomiaru, godzina_pomiaru, temperatura } = item
-  // console.log(item)
   return (
     <article>
       <div className='header'>
@@ -24,7 +22,7 @@ function Card({
         <h5>
           data: {data_pomiaru}
           <span>|</span>
-          godzina: {godzina_pomiaru}:00
+          godzina pomiaru: {godzina_pomiaru}:00
         </h5>
       </div>
       <div className='img'>

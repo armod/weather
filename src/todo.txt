@@ -1,0 +1,6 @@
+[] wystylować aplikację
+[] dodać mapę svg z województwami
+[]
+[]
+[]
+[]
