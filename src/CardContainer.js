@@ -23,7 +23,7 @@ export default CardContainer
 
 const Wrapper = styled.section`
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 10px auto;
   li {
     list-style: none;

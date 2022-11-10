@@ -9,10 +9,12 @@
 
 :root {
   --primary1: #262473;
-  --primary2: #034c8c;
+  --primary2: #034c8c18;
   --primary3: #5faad9;
   --primary4: #f2e205;
   --primary5: #f2a057;
+  --black: #000;
+  --white: #fff;
 }
 body {
   background: var(--primary3);

@@ -50,7 +50,9 @@ export default Card
 const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px 1px var(--black);
   padding: 5px;
   margin: 5px;
   width: 360px;
@@ -79,9 +81,16 @@ const Wrapper = styled.article`
       display: flex;
       justify-content: space-around;
       li {
-        border: 1px solid yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow: 1px 1px 3px 1px var(--black);
+        width: 32px;
+        height: 32px;
         a {
-          align-content: center;
+          margin-top: 4px;
+          color: var(--primary5);
         }
       }
     }
