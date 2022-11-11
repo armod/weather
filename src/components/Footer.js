@@ -55,4 +55,7 @@ const Wrapper = styled.footer`
   @media (min-width: 1200px) {
     flex-direction: row;
   }
+  @media screen and (min-width: 1400px) {
+    max-width: 1300px;
+  }
 `
