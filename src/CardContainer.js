@@ -21,7 +21,7 @@ const CardContainer = ({ weather, nrStation }) => {
 
 export default CardContainer
 
-const Wrapper = styled.section`
+const Wrapper = styled.main`
   display: flex;
   /* border: 1px solid red; */
   margin: 10px auto;

@@ -20,9 +20,3 @@ body {
   background: var(--primary3);
   font-family: 'Poppins', sans-serif;
 }
-
-.btn-toggle {
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-}

@@ -4,6 +4,7 @@ import Layout from './components/Layout'
 import Loading from './Loading'
 import Navbar from './Navbar'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import Footer from './components/Footer'
 
 const url = 'https://danepubliczne.imgw.pl/api/data/synop'
 
@@ -55,36 +56,16 @@ function App() {
 
   return (
     <>
-      <main>
-        <Layout>
-          <Navbar
-            weather={weather}
-            changeCity={changeCity}
-            isNavbarOpen={isNavbarOpen}
-            toggleNavbar={toggleNavbar}
-          />
-          <CardContainer weather={weather} nrStation={nrStation} />
-        </Layout>
-      </main>
-
-      {/* FOOTER */}
-      <footer>
-        <h5>
-          &copy; {new Date().getFullYear()}
-          <span>Maciej Miąso</span>
-        </h5>
-        <h5> All rigth reserved</h5>
-        <p>
-          dane pochodzą z:{' '}
-          <a
-            href='https://danepubliczne.imgw.pl/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            danepubliczne.imgw.pl
-          </a>
-        </p>
-      </footer>
+      <Layout>
+        <Navbar
+          weather={weather}
+          changeCity={changeCity}
+          isNavbarOpen={isNavbarOpen}
+          toggleNavbar={toggleNavbar}
+        />
+        <CardContainer weather={weather} nrStation={nrStation} />
+        <Footer />
+      </Layout>
     </>
   )
 }

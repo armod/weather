@@ -80,6 +80,7 @@ const Wrapper = styled.article`
   width: 360px;
   background: linear-gradient(var(--primary2), var(--primary1));
   color: var(--primary4);
+  transition: all 0.5s ease-in;
   header {
     display: flex;
     justify-content: space-between;
@@ -166,7 +167,7 @@ const Wrapper = styled.article`
 
   @media screen and (min-width: 992px) {
     width: 460px;
-    transition: all 0.5s ease-in linear;
+    transition: all 0.5s ease-in;
     main {
       h1 {
         font-size: 5rem;

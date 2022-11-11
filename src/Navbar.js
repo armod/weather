@@ -38,11 +38,14 @@ const Navbar = ({ weather, changeCity, isNavbarOpen, toggleNavbar }) => {
 export default Navbar
 const Wrapper = styled.nav`
   position: absolute;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   width: 90vw;
+  top: -84%;
+  left: 50%;
+  transform: translate(-50%);
   .navbar-container {
     display: flex;
-    height: 100vh;
+    height: 90vh;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -50,7 +53,6 @@ const Wrapper = styled.nav`
     box-shadow: 4px 4px 10px 4px #222;
     padding: 10px;
     transition: all 0.3s ease-in-out;
-    margin-top: -94vh;
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
     .navbar-content {
@@ -82,18 +84,26 @@ const Wrapper = styled.nav`
 
   @media screen and (min-width: 576px) {
     .navbar-container {
-      height: 62vh;
-      margin-top: -56vh;
+      /* height: 62vh;
+      margin-top: -56vh; */
     }
   }
 
   @media screen and (min-width: 992px) {
     .navbar-container {
-      height: 39vh;
-      margin-top: -33vh;
+      /* height: 39vh;
+      margin-top: -33vh; */
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    max-width: 1300px;
+    .navbar-container {
+      /* height: 39vh;
+      margin-top: -33vh; */
     }
   }
   .show-navbar {
     margin-top: 0vh;
+    transform: translate(0%, 93%);
   }
 `

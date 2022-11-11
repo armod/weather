@@ -12,4 +12,5 @@ const Wrapper = styled.section`
   justify-content: center;
   align-content: center;
   width: 100vw;
+  flex-direction: column;
 `
