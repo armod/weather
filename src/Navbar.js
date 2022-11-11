@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { BsChevronDoubleDown, BsChevronDoubleUp } from 'react-icons/bs'
 
 const Navbar = ({ weather, changeCity, isNavbarOpen }) => {
   return (
@@ -37,25 +38,27 @@ const Wrapper = styled.nav`
 
   .navbar-container {
     background: linear-gradient(var(--primary4), var(--primary5));
+    box-shadow: 4px 4px 10px 4px #222;
     position: absolute;
-    border: 1px solid black;
-    width: 70vw;
-    padding: 15px;
-    margin-top: -350px;
+    width: 100vw;
+    height: 300px;
+    padding: 10px;
+    margin-top: -0px;
     transition: all 0.3s ease-in-out;
   }
   .show-navbar {
-    margin-top: 0;
+    margin-top: 10px;
   }
   .btn {
-    background: var(--primary1);
-    color: var(--primary3);
+    background: transparent;
+    border: transparent;
+    color: var(--primary1);
     margin: 2px;
     padding: 3px;
     transition: all 0.3s ease-out;
     &:hover {
-      background: var(--primary3);
       color: var(--primary1);
+      border-bottom: var(--primary1);
     }
   }
 `
