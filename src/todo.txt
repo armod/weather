@@ -1,6 +1,6 @@
 [] wystylować aplikację
 [] dodać mapę svg z województwami
-[] 
-[]
+[] parsowanie głównej ikony pogody
+[] dodanie zródła danych w stopce
 []
 []
