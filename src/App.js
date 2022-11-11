@@ -56,13 +56,11 @@ function App() {
   return (
     <main>
       <Layout>
-        <button className='btn-toggle' onClick={toggleNavbar}>
-          <GiHamburgerMenu />
-        </button>
         <Navbar
           weather={weather}
           changeCity={changeCity}
           isNavbarOpen={isNavbarOpen}
+          toggleNavbar={toggleNavbar}
         />
         <CardContainer weather={weather} nrStation={nrStation} />
       </Layout>

@@ -8,11 +8,8 @@ const Layout = ({ children }) => {
 export default Layout
 
 const Wrapper = styled.section`
-  display: grid;
-  margin: 0 auto;
-  /* border: 1px solid black; */
-  width: 90vw;
-  .btn-toggle {
-    width: 40px;
-  }
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
 `
