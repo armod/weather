@@ -76,7 +76,7 @@ const Wrapper = styled.article`
   border-radius: 0.5rem;
   box-shadow: 2px 2px 4px 1px var(--black);
   padding: 5px;
-  margin: 5px;
+  margin-top: 10vh;
   width: 360px;
   background: linear-gradient(var(--primary2), var(--primary1));
   color: var(--primary4);
@@ -89,7 +89,7 @@ const Wrapper = styled.article`
     }
   }
   main {
-    margin-top: 10px;
+    margin: 10px 10px 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;

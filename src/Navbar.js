@@ -10,6 +10,7 @@ const Navbar = ({ weather, changeCity, isNavbarOpen, toggleNavbar }) => {
           isNavbarOpen ? 'navbar-container show-navbar' : 'navbar-container'
         }
       >
+        <h4>Wybierz stację:</h4>
         <div className='navbar-content'>
           {weather.map((item) => {
             const { id_stacji, stacja } = item
@@ -37,40 +38,35 @@ const Navbar = ({ weather, changeCity, isNavbarOpen, toggleNavbar }) => {
 export default Navbar
 const Wrapper = styled.nav`
   position: absolute;
-  margin: 0 auto;
-  /* position: sticky; */
-  width: 80vw;
+  /* margin: 0 auto; */
+  width: 90vw;
   .navbar-container {
     display: flex;
     height: 100vh;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(var(--primary4), var(--primary5));
+    background: linear-gradient(var(--primary4), var(--primary3));
     box-shadow: 4px 4px 10px 4px #222;
     padding: 10px;
     transition: all 0.3s ease-in-out;
-    /* transform-origin: bottom center;
-    transform: translate(0, -80%); */
-    margin-top: -300px;
-  }
-
-  .show-navbar {
-    /* transform: translate(0, 0); */
-    margin-top: 0px;
+    margin-top: -94vh;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    .navbar-content {
+      text-align: center;
+    }
   }
 
   .btn-station {
     background: transparent;
-    border: transparent;
     color: var(--primary1);
     margin: 2px;
     padding: 3px;
+    font-size: 1.25rem;
     &:hover {
+      background: var(--primary5);
       color: var(--black);
-      border-bottom: 2px solid var(--primary1);
-      margin-bottom: 0;
-      padding-bottom: 0;
     }
   }
 
@@ -85,16 +81,19 @@ const Wrapper = styled.nav`
   }
 
   @media screen and (min-width: 576px) {
-    /* height: 600px; */
     .navbar-container {
-      height: 300px;
+      height: 62vh;
+      margin-top: -56vh;
     }
   }
 
   @media screen and (min-width: 992px) {
-    /* height: 600px; */
     .navbar-container {
-      height: 200px;
+      height: 39vh;
+      margin-top: -33vh;
     }
+  }
+  .show-navbar {
+    margin-top: 0vh;
   }
 `
