@@ -10,7 +10,7 @@ const Footer = () => {
       </h5>
       <h5> All rigth reserved</h5>
 
-      <h5>
+      <h6>
         dane pochodzą z:{' '}
         <a
           href='https://danepubliczne.imgw.pl/'
@@ -19,7 +19,7 @@ const Footer = () => {
         >
           imgw.pl
         </a>
-      </h5>
+      </h6>
     </Wrapper>
   )
 }
@@ -38,20 +38,21 @@ const Wrapper = styled.footer`
   text-align: center;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
+  box-shadow: 2px -2px 5px 1px #100;
   width: 90vw;
   span {
     color: var(--primary5);
   }
   h5,
+  h6,
   a {
     color: var(--white);
     margin: 0.1rem;
-
     font-weight: 400;
     text-transform: none;
     line-height: 1.25;
   }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     flex-direction: row;
   }
 `

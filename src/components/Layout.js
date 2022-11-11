@@ -9,8 +9,8 @@ export default Layout
 
 const Wrapper = styled.section`
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
   width: 100vw;
+  height: 100vh;
   flex-direction: column;
 `

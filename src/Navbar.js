@@ -40,7 +40,7 @@ const Wrapper = styled.nav`
   position: absolute;
   margin: 0 auto;
   width: 90vw;
-  top: -84%;
+  top: -85%;
   left: 50%;
   transform: translate(-50%);
   .navbar-container {
@@ -51,7 +51,7 @@ const Wrapper = styled.nav`
     flex-direction: column;
     background: linear-gradient(var(--primary4), var(--primary3));
     box-shadow: 4px 4px 10px 4px #222;
-    padding: 10px;
+    padding: 15px 0 10px;
     transition: all 0.3s ease-in-out;
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
