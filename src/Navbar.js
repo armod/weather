@@ -68,13 +68,14 @@ const Wrapper = styled.nav`
       text-align: center;
     }
     .mapa {
-      #path1364 {
-        fill: #f22;
-        fill-opacity: 1;
-      }
-      img {
-        /* background: #000; */
-        svg {
+      svg {
+        * {
+          transition: all 0.3s ease-out;
+          fill: var(--primary5);
+          fill-opacity: 1;
+          &:hover {
+            fill: green;
+          }
         }
       }
     }

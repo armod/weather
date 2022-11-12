@@ -104,6 +104,9 @@ const Polska = () => {
           fill='#94add6'
           fillOpacity='1'
           id='path1312'
+          onClick={() => {
+            console.log('from svg')
+          }}
         />
       </svg>
     </div>
