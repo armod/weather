@@ -16,7 +16,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [weather, setWeather] = useState([])
   const [nrStation, setNrStation] = useState('12415')
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false)
+  const [isNavbarOpen, setIsNavbarOpen] = useState(true)
   const [pogoda, setPogoda] = useState([])
 
   const changeCity = (e) => {
@@ -57,7 +57,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetchIMGW()
+    // fetchIMGW()
     setTimeout(() => {
       fetchWeather()
     }, 100)

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import { BsChevronDoubleDown, BsChevronDoubleUp } from 'react-icons/bs'
+import mapa from './assets/images/Polska_wojewodztwa.svg'
+import Polska from './components/Polska'
 
 const Navbar = ({ weather, changeCity, isNavbarOpen, toggleNavbar }) => {
   return (
@@ -11,7 +13,13 @@ const Navbar = ({ weather, changeCity, isNavbarOpen, toggleNavbar }) => {
         }
       >
         <h4>Wybierz stację:</h4>
-        <div className='navbar-content'>
+        {/* MAPA */}
+        <div className='mapa'>
+          {/* <img src={mapa} alt='mapa Polski' /> */}
+          <Polska />
+        </div>
+
+        {/* <div className='navbar-content'>
           {weather.map((item) => {
             const { id_stacji, stacja } = item
             // console.log(item.stacja)
@@ -26,7 +34,7 @@ const Navbar = ({ weather, changeCity, isNavbarOpen, toggleNavbar }) => {
               </button>
             )
           })}
-        </div>
+        </div> */}
         <button className='btn-navbar' onClick={toggleNavbar}>
           {isNavbarOpen ? <BsChevronDoubleUp /> : <BsChevronDoubleDown />}
         </button>
@@ -49,7 +57,8 @@ const Wrapper = styled.nav`
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(var(--primary4), var(--primary3));
+    /* background: linear-gradient(var(--primary4), var(--primary3)); */
+    background: var(--primary1);
     box-shadow: 4px 4px 10px 4px #222;
     padding: 15px 0 10px;
     transition: all 0.3s ease-in-out;
@@ -57,6 +66,17 @@ const Wrapper = styled.nav`
     border-bottom-right-radius: 24px;
     .navbar-content {
       text-align: center;
+    }
+    .mapa {
+      #path1364 {
+        fill: #f22;
+        fill-opacity: 1;
+      }
+      img {
+        /* background: #000; */
+        svg {
+        }
+      }
     }
   }
 
