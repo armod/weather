@@ -71,6 +71,7 @@ const Wrapper = styled.nav`
       svg {
         * {
           transition: all 0.3s ease-out;
+          /* animation: bounce 3s infinite; */
           fill: var(--primary5);
           fill-opacity: 1;
           &:hover {
@@ -98,8 +99,27 @@ const Wrapper = styled.nav`
     border: transparent;
     font-size: 2rem;
     transition: all 0.3s ease-in-out;
+    animation: btn-navbar-bounce 3s infinite;
     &:hover {
       scale: 1.2;
+    }
+  }
+  @keyframes btn-navbar-bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    40% {
+      transform: translateY(2px);
+      opacity: 0.4;
+    }
+    60% {
+      transform: translateY(1px);
+      opacity: 0.6;
     }
   }
 
