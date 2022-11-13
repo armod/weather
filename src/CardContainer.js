@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro'
+import Wrapper from './assets/wrappers/CardContainer'
 import Card from './Card'
 
 const CardContainer = ({ weather, nrStation }) => {
@@ -20,12 +20,3 @@ const CardContainer = ({ weather, nrStation }) => {
 }
 
 export default CardContainer
-
-const Wrapper = styled.main`
-  display: flex;
-  /* border: 1px solid red; */
-  margin: 10px auto;
-  li {
-    list-style: none;
-  }
-`
