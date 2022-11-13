@@ -27,11 +27,10 @@ const Footer = () => {
 export default Footer
 
 const Wrapper = styled.footer`
-  /* position: absolute; */
-  height: 4rem;
+  height: 3rem;
   display: flex;
   margin: 0 auto;
-  flex-direction: column;
+  flex-direction: row; //column
   justify-content: center;
   align-items: center;
   background: var(--primary1);
@@ -52,9 +51,10 @@ const Wrapper = styled.footer`
     text-transform: none;
     line-height: 1.25;
   }
-  @media (min-width: 1200px) {
+
+  /* @media (min-width: 1200px) {
     flex-direction: row;
-  }
+  } */
   @media screen and (min-width: 1400px) {
     max-width: 1300px;
   }

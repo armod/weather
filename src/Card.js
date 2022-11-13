@@ -9,7 +9,7 @@ function Card({
   godzina_pomiaru,
   temperatura,
   predkosc_wiatru,
-  kierunek_wiatru,
+  cisnienie,
   wilgotnosc_wzgledna,
   suma_opadu,
 }) {
@@ -31,23 +31,27 @@ function Card({
         <div className='weather-icon'>{weatherIcons[1].icon}</div>
         <div className='wind-speed'>
           <p>prędkość wiatru</p>
-          <span>{weatherIcons[2].icon}</span>
-          <span>{predkosc_wiatru} m/s</span>
+          <span className='icon'>{weatherIcons[2].icon}</span>
+          <span className='value'>{predkosc_wiatru}</span>
+          <span className='jednostka'>m/s</span>
         </div>
-        <div className='wind-direction'>
-          <p>kierunek wiatru</p>
-          <span>{weatherIcons[14].icon}</span>
-          <span>{kierunek_wiatru}</span>
+        <div className='barometer'>
+          <p>ciśnienie</p>
+          <span className='icon'>{weatherIcons[13].icon}</span>
+          <span className='value'>{cisnienie} </span>
+          <span className='jednostka'> hPa</span>
         </div>
         <div className='humidity'>
           <p>wilgotnosc względna</p>
-          <span>{weatherIcons[10].icon}</span>
-          <span>{wilgotnosc_wzgledna}</span>
+          <span className='icon'>{weatherIcons[10].icon}</span>
+          <span className='value'>{wilgotnosc_wzgledna}</span>
+          <span className='jednostka'> %</span>
         </div>
         <div className='rain'>
           <p>suma opadu</p>
-          <span>{weatherIcons[3].icon}</span>
-          <span>{suma_opadu}</span>
+          <span className='icon'>{weatherIcons[3].icon}</span>
+          <span className='jednostka'>{suma_opadu}</span>
+          <span className='jednostka'> mm</span>
         </div>
       </div>
       <footer>
@@ -99,6 +103,7 @@ const Wrapper = styled.article`
       font-weight: 400;
     }
     h2 {
+      font-size: 2rem;
       order: -1;
     }
   }
@@ -118,23 +123,40 @@ const Wrapper = styled.article`
       }
     }
     .wind-speed,
-    .wind-direction,
+    .barometer,
     .humidity,
     .rain {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       width: 320px;
-      margin: 3px;
+      margin-bottom: 15px;
       padding: 3px;
       p {
         grid-column: 1/3;
         grid-row: 1;
+        margin-left: 10px;
       }
       span {
         grid-row: 2;
       }
-      &:hover {
-        border-bottom: 2px;
+      .icon {
+        margin: 0 auto;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      .value {
+        /* border: 1px solid blue; */
+        margin: auto 0 auto auto;
+        justify-content: flex-end;
+      }
+      .jednostka {
+        margin: 0 auto;
+        padding-top: 5px;
+        /* border: 1px solid red; */
+        grid-row: 2;
+        font-weight: 100;
+        font-size: 1.5rem;
       }
     }
   }
