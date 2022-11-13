@@ -38,7 +38,13 @@ function Card({
         <div className='barometer'>
           <p>ciśnienie</p>
           <span className='icon'>{weatherIcons[13].icon}</span>
-          <span className='value'>{cisnienie} </span>
+          <span className='value'>
+            {cisnienie !== null ? (
+              cisnienie
+            ) : (
+              <p style={{ color: 'pink' }}>brak danych</p>
+            )}
+          </span>
           <span className='jednostka'> hPa</span>
         </div>
         <div className='humidity'>
@@ -50,7 +56,7 @@ function Card({
         <div className='rain'>
           <p>suma opadu</p>
           <span className='icon'>{weatherIcons[3].icon}</span>
-          <span className='jednostka'>{suma_opadu}</span>
+          <span className='value'>{suma_opadu}</span>
           <span className='jednostka'> mm</span>
         </div>
       </div>

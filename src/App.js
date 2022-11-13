@@ -27,7 +27,6 @@ function App() {
   }
 
   const fetchWeather = async () => {
-    // console.log('start fetching')
     setIsLoading(true)
     try {
       const response = await fetch(url)
@@ -53,7 +52,6 @@ function App() {
 
   const toggleNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen)
-    console.log(isNavbarOpen)
   }
 
   useEffect(() => {
