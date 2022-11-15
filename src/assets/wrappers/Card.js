@@ -55,13 +55,13 @@ const Wrapper = styled.article`
     .rain {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      width: 320px;
+      width: 300px;
       margin-bottom: 15px;
       padding: 3px;
       p {
         grid-column: 1/3;
         grid-row: 1;
-        margin-left: 10px;
+        margin-left: 0px;
       }
       span {
         grid-row: 2;
@@ -110,6 +110,25 @@ const Wrapper = styled.article`
           box-shadow: 1px 1px 3px 1px var(--primary5);
           background: var(--primary1);
         }
+      }
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    width: 360px;
+    .wind-speed,
+    .barometer,
+    .humidity,
+    .rain {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 320px;
+      margin-bottom: 15px;
+      padding: 3px;
+      p {
+        grid-column: 1/3;
+        grid-row: 1;
+        margin-left: 10px;
       }
     }
   }

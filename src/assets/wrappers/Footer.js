@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 
 const Wrapper = styled.footer`
   height: 3rem;
-  display: flex;
+  display: none;
   margin: 0 auto;
   flex-direction: row; //column
   justify-content: center;
@@ -26,9 +26,10 @@ const Wrapper = styled.footer`
     line-height: 1.25;
   }
 
-  /* @media (min-width: 1200px) {
+  @media (min-width: 768px) {
+    display: flex;
     flex-direction: row;
-  } */
+  }
   @media screen and (min-width: 1400px) {
     max-width: 1300px;
   }
