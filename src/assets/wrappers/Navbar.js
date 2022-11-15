@@ -31,7 +31,7 @@ const Wrapper = styled.nav`
     color: var(--primary1);
     margin: 2px;
     padding: 3px;
-    font-size: 1rem;
+    font-size: 0.75rem;
     &:hover {
       background: var(--primary5);
       color: var(--black);

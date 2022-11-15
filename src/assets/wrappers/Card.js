@@ -8,7 +8,7 @@ const Wrapper = styled.article`
   box-shadow: 2px 2px 4px 1px var(--black);
   padding: 5px;
   margin-top: 10vh;
-  width: 360px;
+  width: 300px;
   background: linear-gradient(var(--primary2), var(--primary1));
   color: var(--primary4);
   transition: all 0.5s ease-in;

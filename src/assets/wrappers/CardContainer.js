@@ -3,9 +3,12 @@ import styled from 'styled-components'
 const Wrapper = styled.main`
   display: flex;
   /* border: 1px solid red; */
-  margin: 10px auto;
+  margin: 0px auto;
   li {
     list-style: none;
+  }
+  @media screen and (min-width: 572) {
+    margin: 15px auto;
   }
 `
 
